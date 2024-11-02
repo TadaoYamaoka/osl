@@ -1059,7 +1059,7 @@ namespace osl
     }
     enum { 
       INVALID_VALUE = (1<<8), DECLARE_WIN = (2<<8),
-      BLACK_PASS = 0, WHITE_PASS = (-1)<<28, 
+      BLACK_PASS = 0, WHITE_PASS = (static_cast<unsigned int>(-1))<<28, 
     };
   public:
     int intValue() const { return move; }

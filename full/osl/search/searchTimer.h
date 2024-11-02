@@ -7,6 +7,7 @@
 #include "osl/oslConfig.h"
 #include <limits>
 #include <vector>
+#include <memory>
 
 namespace osl
 {

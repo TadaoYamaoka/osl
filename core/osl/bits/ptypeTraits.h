@@ -292,7 +292,7 @@ namespace osl
   template<Ptype T>
   struct PtypeFunsSub<T,true>
   {
-    static const uint64_t indexMask=(-1LL<<(PtypeTraits<T>::indexMin))^(-1LL<<(PtypeTraits<T>::indexLimit));
+    static const uint64_t indexMask=(static_cast<uint64_t>(-1LL)<<(PtypeTraits<T>::indexMin))^(static_cast<uint64_t>(-1LL)<<(PtypeTraits<T>::indexLimit));
     static const Ptype promotePtype=static_cast<Ptype>(static_cast<int>(T)-8);
     static const Ptype basicType = T;
   };

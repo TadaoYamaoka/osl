@@ -197,7 +197,7 @@ DeterminateWeightTracer::selectMove() const
     if (it->weight == 0)
       break;
 
-    if (it->weight != boost::next(it)->weight)
+    if (it->weight != std::next(it)->weight)
       top -= 1;
   }
   moves.erase(it, moves.end());
